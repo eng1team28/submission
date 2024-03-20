@@ -21,7 +21,7 @@ wget \
 git submodule foreach git pull
 
 # copy pdfs
-cp eng1team28.github.io/pdf/* "${zipdir}/"
+cp eng1team28.github.io/pdf/*.pdf "${zipdir}/"
 
 # copy source code
 # checked-in files only using git archive
