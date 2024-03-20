@@ -1,2 +1,6 @@
+# release jar file
+*.jar
+# exam zip file
 exam.zip
+# exam submission building directory
 exam/

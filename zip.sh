@@ -13,9 +13,12 @@ mkdir -p "${zipdir}"
 cp url1.txt "${zipdir}"
 
 # get executable jar
+# skips download if there's no new release
 wget \
-    --directory-prefix="${zipdir}" \
+    --timestamping \
     "https://github.com/eng1team28/game/releases/latest/download/${jar_name}"
+# copy jar to zip directory
+cp "${jar_name}" "${zipdir}"
 
 # update submodules
 git submodule foreach git pull
