@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eux
 
-url='https://teaching.cs.york.ac.uk/student/2023-4/submit/COM00019I/001/A'
+url='https://teaching.cs.york.ac.uk/student/2023-4/submit/COM00019I/002/A'
 username='jm3017'
 zip_file='exam.zip'
 
