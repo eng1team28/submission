@@ -1,6 +1,6 @@
 [submodule "eng1team28.github.io"]
 	path = eng1team28.github.io
 	url = https://github.com/eng1team28/eng1team28.github.io.git
-[submodule "game"]
-	path = game
-	url = https://github.com/eng1team28/game.git
+[submodule "game2"]
+	path = game2
+	url = https://github.com/eng1team28/game2.git
