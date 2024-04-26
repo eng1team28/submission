@@ -10,13 +10,13 @@ rm -rf "${zipdir}"
 mkdir -p "${zipdir}"
 
 # copy url file
-cp url1.txt "${zipdir}"
+cp url2.txt "${zipdir}"
 
 # get executable jar
 # skips download if there's no new release
 wget \
     --timestamping \
-    "https://github.com/eng1team28/game/releases/latest/download/${jar_name}"
+    "https://github.com/eng1team28/game2/releases/latest/download/${jar_name}"
 # copy jar to zip directory
 cp "${jar_name}" "${zipdir}"
 
@@ -29,7 +29,7 @@ cp eng1team28.github.io/pdf/*.pdf "${zipdir}/"
 # copy source code
 # checked-in files only using git archive
 mkdir -p "${zipdir}/game/"
-git -C game/ archive --format='tar' 'HEAD' | bsdtar --extract --directory "${zipdir}/game"
+git -C 'game2/' archive --format='tar' 'HEAD' | bsdtar --extract --directory "${zipdir}/game2"
 
 # create submission zip
 bsdtar --auto-compress --create --file "${zip_file}" --directory "${zipdir}" ./
