@@ -14,9 +14,17 @@ cp url2.txt "${zipdir}"
 
 # get executable jar
 # skips download if there's no new release
-wget \
-    --timestamping \
-    "https://github.com/eng1team28/game2/releases/latest/download/${jar_name}"
+# wget \
+#     --timestamping \
+#     "https://github.com/eng1team28/game2/releases/latest/download/${jar_name}"
+
+# using gh instead allows downloading
+# from a private repo
+gh release download \
+    --repo 'eng1team28/game2' \
+    --pattern '*.jar' \
+    --clobber
+
 # copy jar to zip directory
 cp "${jar_name}" "${zipdir}"
 
