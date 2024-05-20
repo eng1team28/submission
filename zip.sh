@@ -36,8 +36,9 @@ cp eng1team28.github.io/pdf/*.pdf "${zipdir}/"
 
 # copy source code
 # checked-in files only using git archive
-mkdir -p "${zipdir}/game/"
-git -C 'game2/' archive --format='tar' 'HEAD' | bsdtar --extract --directory "${zipdir}/game2"
+impl_dir="${zipdir}/game2/"
+mkdir -p "${impl_dir}"
+git -C 'game2/' archive --format='tar' 'HEAD' | bsdtar --extract --directory "${impl_dir}"
 
 # create submission zip
 bsdtar --auto-compress --create --file "${zip_file}" --directory "${zipdir}" ./
